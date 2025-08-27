@@ -24,3 +24,15 @@ function listarAmigos() {
         lista.innerHTML += `<li>${amigos[i]}</li>`;
     }
 }
+
+function sortearAmigo() {
+    if (!amigos.length) {
+        alert("Adicione pelo menos dois amigos para sortear.");
+        return;
+    }
+    let random_index = Math.floor(Math.random() * amigos.length);
+    let amigo_sorteado = amigos[random_index];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `O amigo secreto sorteado foi: <strong>${amigo_sorteado}</strong>`;
+}
