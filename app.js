@@ -5,7 +5,7 @@ let amigos = [];
 function adicionarAmigo() {
     let nome = document.querySelector("#amigo").value;
 
-    if (nome.isEmpty) {
+    if (!nome.length) {
         alert("Por favor, insira um nome.");
         return;
     };
